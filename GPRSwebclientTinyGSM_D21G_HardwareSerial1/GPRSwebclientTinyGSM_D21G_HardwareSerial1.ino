@@ -14,6 +14,8 @@
 //#define TINY_GSM_MODEM_A6
 //#define TINY_GSM_MODEM_M590
 
+const int pwr_pin = 6;
+
 #include <TinyGsmClient.h>
 
 // Your GPRS credentials
@@ -38,6 +40,13 @@ const char resource[] = "/vshymanskyy/tinygsm/master/extras/logo.txt";
 int port = 80;
 
 void setup() {
+  
+  //turn on modem with 1 second pulse on D6. 
+  pinMode(pwr_pin, OUTPUT);
+  digitalWrite(pwr_pin, HIGH);
+  delay(1000);
+  digitalWrite(pwr_pin, LOW);
+  
   // Set console baud rate
   SerialUSB.begin(115200);
   delay(10);
