@@ -47,7 +47,7 @@ void setup() {
   delay(1000);
   digitalWrite(pwr_pin, LOW);
   // Set console baud rate
-  SerialUSB.begin(115200);
+  Serial.begin(115200);
   delay(10);
 
   // Set GSM module baud rate
