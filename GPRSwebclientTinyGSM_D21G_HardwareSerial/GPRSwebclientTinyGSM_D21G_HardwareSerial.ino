@@ -16,6 +16,8 @@
 
 #include <TinyGsmClient.h>
 
+const int pwr_pin = 6;
+
 // Your GPRS credentials
 // Leave empty, if missing user or pass
 const char apn[]  = "YourAPN";
@@ -38,6 +40,13 @@ const char resource[] = "/vshymanskyy/tinygsm/master/extras/logo.txt";
 int port = 80;
 
 void setup() {
+
+  //turn on modem with 1 second pulse on D6. 
+  pinMode(pwr_pin, OUTPUT);
+  digitalWrite(pwr_pin, HIGH);
+  delay(1000);
+  digitalWrite(pwr_pin, LOW);
+  
   // Set console baud rate
   SerialUSB.begin(115200);
   delay(10);
