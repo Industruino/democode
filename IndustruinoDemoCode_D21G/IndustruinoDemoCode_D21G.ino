@@ -120,7 +120,7 @@ void setup() {
   }
 
   //debug
-  Serial.begin(9600); //enables Serial port for debugging messages
+  SerialUSB.begin(9600); //enables port for debugging messages
 
   //Menu init
   MenuWelcome(); //load first menu
@@ -1138,7 +1138,7 @@ float EditValue() //a function to edit a variable using the UI - function is cal
       }
       //print updated value
       lcd.setCursor(66, row);
-      Serial.println(TargetValue);
+      SerialUSB.println(TargetValue);
       lcd.print(TargetValue, 0);
       lastChannel = channel;
     }
@@ -1178,7 +1178,7 @@ float EditFloatValue() //a function to edit a variable using the UI - function i
       }
       //print updated value
       lcd.setCursor(35, row);
-      Serial.println(TargetValue);
+      SerialUSB.println(TargetValue);
       lcd.print(TargetValue, 2);
       lastChannel = channel;
     }
@@ -1210,7 +1210,7 @@ void ReadButtons() {
     }
     lastBtnEnt = millis();
     lastAdminActionTime = millis();
-    Serial.println(enterPressed);
+    SerialUSB.println(enterPressed);
   }
   prevBtnEnt = buttonEnterState;
 
@@ -1223,7 +1223,7 @@ void ReadButtons() {
     }
     lastBtnUp = millis();
     lastAdminActionTime = millis();
-    //Serial.println("UpPressed");
+    //SerialUSB.println("UpPressed");
   }
   prevBtnUp = buttonUpState;
 
@@ -1236,7 +1236,7 @@ void ReadButtons() {
     }
     lastBtnDown = millis();
     lastAdminActionTime = millis();
-    //Serial.println("DownPressed");
+    //SerialUSB.println("DownPressed");
   }
   prevBtnDown = buttonDownState;
 
