@@ -2,7 +2,7 @@
  * Industruino D21G EEPROM demo
  * Tom Tobback Aug 2017
  * 
- * The EEPROM has 4 I2C addresses:
+ * The EEPROM Microchip AT24CS08 has 4 I2C addresses:
  * 0x50, 0x51, 0x52, 0x53
  * each I2C address has 255 addresses of 1 byte = 255 bytes 
  * in total 4x 255 bytes are available = 1kByte 
