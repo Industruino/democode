@@ -41,7 +41,7 @@ void setup() {
   byte val = 77;
   for (int i=0;i<=EEPROM_SIZE;i++) {
     eeprom50.writeByte(i, val);
-    delay(1);   // NEEDED between successive writings
+    delay(5);   // NEEDED between successive writings
   }
 
   delay(1000);
@@ -79,11 +79,11 @@ void setup() {
   union_long_write.l = long_number;  // asign the value
 
   eeprom51.writeByte(10, union_long_write.b[0]);
-  delay(1);
+  delay(5);
   eeprom51.writeByte(11, union_long_write.b[1]);
-  delay(1);
+  delay(5);
   eeprom51.writeByte(12, union_long_write.b[2]);
-  delay(1);
+  delay(5);
   eeprom51.writeByte(13, union_long_write.b[3]);
   
   delay(1000);
@@ -115,11 +115,11 @@ void setup() {
   union_float_write.f = float_number;   // assign the value
 
   eeprom53.writeByte(252, union_float_write.b[0]);
-  delay(1);
+  delay(5);
   eeprom53.writeByte(253, union_float_write.b[1]);
-  delay(1);
+  delay(5);
   eeprom53.writeByte(254, union_float_write.b[2]);
-  delay(1);
+  delay(5);
   eeprom53.writeByte(255, union_float_write.b[3]);
   
   delay(1000);
