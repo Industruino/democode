@@ -6,6 +6,10 @@
  * TinyGSM Getting Started guide:
  *   http://tiny.cc/tiny-gsm-readme
  *
+ * Adapted for Industruino D21G
+ * if you have an INDIO unit you need to disconnect D0/D1 ('Serial') 
+ * from the RS485 port by moving the hardware switch on the baseboard
+ * upwards, away from the RS485 terminals
  **************************************************************/
 
 // Select your modem:
