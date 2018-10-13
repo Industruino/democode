@@ -1,6 +1,6 @@
 /*
  * Industruino example sketch
- * The D21G topboard has a built-in RTC with a EUI-48/EUI-64 number that can be used as MAC address
+ * The D21G topboard has a built-in RTC (MCP79402) with a EUI-64 number that can be used as MAC address
  * This sketch:
  * -reads 6-byte (48-bit) MAC address from RTC EEPROM over I2C
  * -starts Ethernet with MAC address and static IP address
