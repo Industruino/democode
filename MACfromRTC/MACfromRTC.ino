@@ -33,11 +33,11 @@ void loop() {
 void readMACfromRTC() {
   SerialUSB.println("READING MAC from RTC EEPROM");
   int mac_index = 0;
-  for (int i = 0; i < 8; i++) {   // read 8 bytes of 64-bit MAC address, skipping first 2 of 8: 0xf2 to 0xf7
+  for (int i = 0; i < 8; i++) {   // read 8 bytes of 64-bit MAC address, 3 bytes valid OUI, 5 bytes unique EI
     byte m = readByte(0x57, 0xf0 + i);
     SerialUSB.print(m, HEX);
     if (i < 7) SerialUSB.print(":");
-    if (i != 3 && i != 4) {
+    if (i != 3 && i != 4) {       // for 6-bytes MAC, skip first 2 bytes of EI
       mac[mac_index] = m;
       mac_index++;
     }      
