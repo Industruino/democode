@@ -12,5 +12,6 @@ Notes:
  }
  ```
  Then you can use this to write any mA_value: ```analogWrite(PIN_DAC0, mAmap(mA_value));```
+ 
 2. As long as the transmitter's USB is connected, the mA output values are not correct. Disconnect to get the real output.
 3. Default serial configuration in the Arduino IDE *Tools > Board* is 'SPI+I2C' which is fine for the demo sketches; if you want need a UART please select the required option. 
