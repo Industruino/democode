@@ -8,7 +8,7 @@
   > if the DHT returns "nan" (not a number) then output 11mA
 
   Connections on 4-20mA.ker to DHT:
-  1     DATA with pull-up resistor if not included in DHT module
+  1     DATA with pull-up resistor if not included in DHT11 module; for the DHT22 do not use a pull-up as it has an internal 4K7 pull-up (measure to check)
   2     NC
   3     NC
   4     NC
