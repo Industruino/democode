@@ -15,6 +15,7 @@ IPAddress industruino_ip (192, 168, 1, 100);    // example
 
 void setup() {
   Wire.begin();
+  SerialUSB.begin(115200);
   while (!SerialUSB);          // sketch waits here for Serial Monitor
   
   SerialUSB.println();
